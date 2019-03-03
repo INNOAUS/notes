@@ -1,0 +1,28 @@
+C++ 콘솔 응용프로그램에 색 적용하기
+
+프로젝트 rang은 Abhinav Gauniyal 이 만든 헤더파일만으로 동작하는 콘솔 텍스트 색 적용하는 오픈소스 라이브러리 입니다.
+https://github.com/agauniyal/rang
+
+1. 라이브러리 의존성
+rang은 C++ standard library만으로 동작하므로 별도의 추가 라이브러리는 필요하지 않습니다.
+
+2. 설치
+$ git clone https://github.com/agauniyal/rang.git 
+
+3. 내 프로젝트에 적용하기
+설치 폴더내 include/rang.hpp 파일을 자신의 프로젝트의 적정한 위치에 복사하거나, 설치 폴더의 include 폴더를 프로젝트 경로에 추가합니다.
+
+4. 간단한 sample code
+
+#include "rang.hpp"
+
+int main()
+{
+    std::cout << "Hello world !!!" 
+	          << rang::style::bold << "Rang styled text !!!"
+			  << rang::style::reset << std::endl;
+	return 0;
+}
+
+output :
+Hello world !!! (bold font display)
